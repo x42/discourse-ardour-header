@@ -16,9 +16,9 @@ api.decorateWidget("header-icons:before", helper => {
     ]);
   });
   alinks.push(
-    helper.h('li.header',
+    helper.h('li.header.ardour',
       [ helper.h('a.icon.btn-flat',
-        { href:'https://www.ardour.org/', title: 'Home' },
+        { href:'https://ardour.org/', title: 'Home' },
         helper.h('i.fa.fa-home.home-button-icon.d-icon'))
       ]
     )
@@ -27,7 +27,7 @@ api.decorateWidget("header-icons:before", helper => {
 });
 
 api.decorateWidget('hamburger-menu:footerLinks', () => {
-  var hlt = settings.Ardour_links;
+  var hlt = 'Ardour-Frontpage,https://ardour.org|'+settings.Ardour_links;
   return hlt.split("|").map(i => {
     var seg = $.map(i.split(","), $.trim);
     return { href: seg[1], rawLabel: seg[0] }
