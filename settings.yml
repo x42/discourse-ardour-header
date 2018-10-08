@@ -1,0 +1,5 @@
+Ardour_links:
+  type: list
+  default: 'Download,http://ardour.org/download.html|News,https://discourse.ardour.org/c/blog|Bug Tracker,http://tracker.ardour.org/|Nightlies,https://nightly.ardour.org/|Support,https://community.ardour.org/community'
+  description:
+    en: "Comma delimited: Title,URL."

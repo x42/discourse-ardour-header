@@ -1,0 +1,9 @@
+.ardour {
+  font-size: 15px;
+  margin:0 1px;
+}
+@media (max-width: 750px){
+  .ardour {
+    display: none !important;
+  }
+}

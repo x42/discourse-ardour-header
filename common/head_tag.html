@@ -1,0 +1,28 @@
+<script type="text/discourse-plugin" version="0.4">
+api.decorateWidget("header-icons:before", helper => {
+  var hlt = settings.Ardour_links;
+  const alinks = hlt.split("|").map(i => {
+    var seg = $.map(i.split(","), $.trim);
+    return helper.h("li.header.ardour", [
+      helper.h(
+        "a.icon.btn-flat",
+        {
+          href: seg[1],
+          title: seg[0],
+          style: "width:auto;"
+        },
+        seg[0]
+      )
+    ]);
+  });
+  alinks.push(
+    helper.h('li.header',
+      [ helper.h('a.icon.btn-flat',
+        { href:'https://www.ardour.org/', title: 'Home' },
+        helper.h('i.fa.fa-home.home-button-icon.d-icon'))
+      ]
+    )
+  );
+  return alinks;
+});
+</script>
