@@ -25,4 +25,13 @@ api.decorateWidget("header-icons:before", helper => {
   );
   return alinks;
 });
+
+api.decorateWidget('hamburger-menu:footerLinks', () => {
+  var hlt = settings.Ardour_links;
+  return hlt.split("|").map(i => {
+    var seg = $.map(i.split(","), $.trim);
+    return { href: seg[1], rawLabel: seg[0] }
+  });
+});
+
 </script>
