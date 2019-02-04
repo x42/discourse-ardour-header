@@ -1,0 +1,9 @@
+.ardour {
+	.icon {
+		color:$secondary;
+		&:hover,
+		&:focus {
+			color: $primary;
+		}
+	}
+}
